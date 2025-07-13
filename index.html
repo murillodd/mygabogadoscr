@@ -1,82 +1,146 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M Y G Abogados</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Y G Abogados</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        header {
+            background-color: #001f3f;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #001f3f;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section h3 {
+            font-size: 1.5rem;
+            color: #001f3f;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        .contact-info {
+            margin: 1rem 0;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: none; /* oculto hasta que se configure el número */
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-  <!-- Encabezado -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">M Y G Abogados</h1>
-      <nav>
-        <ul class="flex space-x-6 text-sm font-medium">
-          <li><a href="#inicio" class="hover:text-blue-700">Inicio</a></li>
-          <li><a href="#servicios" class="hover:text-blue-700">Servicios</a></li>
-          <li><a href="#acerca" class="hover:text-blue-700">Nosotros</a></li>
-          <li><a href="#contacto" class="hover:text-blue-700">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+    <h1>M Y G Abogados</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
 
-  <!-- Bienvenida -->
-  <section id="inicio" class="bg-blue-100 py-20 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-4">Soluciones legales con integridad y experiencia</h2>
-      <p class="text-lg">Asesoría jurídica confiable en Costa Rica por más de 29 años en Derecho Comercial, Civil, Administrativo y Penal.</p>
-    </div>
-  </section>
+<section class="hero">
+    <h2>Murillo y Guzmán Abogados y Notarios</h2>
+    <p>Comprometidos con la excelencia jurídica, brindando soluciones legales confiables, profesionales y éticamente sólidas en Costa Rica.</p>
+</section>
 
-  <!-- Servicios -->
-  <section id="servicios" class="py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-bold mb-10 text-center">Áreas de Práctica</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-2">Derecho Civil</h4>
-          <p>Litigio civil, contratos, familia y sucesiones.</p>
-        </div>
-        <div class="bg-white p-6 shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-2">Derecho Comercial</h4>
-          <p>Sociedades, contratos mercantiles y asesoría a empresas.</p>
-        </div>
-        <div class="bg-white p-6 shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-2">Derecho Penal</h4>
-          <p>Defensa técnica en procesos penales y denuncias.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="section">
+    <h3>Áreas de Práctica</h3>
+    <p>Derecho Civil, Comercial, Administrativo, Agrario, Ambiental y Penal.</p>
+</section>
 
-  <!-- Sobre Nosotros -->
-  <section id="acerca" class="bg-gray-100 py-16">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold mb-6">Sobre el Bufete</h3>
-      <p class="text-lg">M Y G Abogados es una firma costarricense conformada por profesionales con amplia experiencia en diversas ramas del Derecho, comprometidos con la ética, la excelencia profesional y la defensa de los intereses de nuestros clientes.</p>
-    </div>
-  </section>
+<section class="section">
+    <h3>Quiénes Somos</h3>
+    <p>Con más de 29 años de experiencia, el Bufete Murillo y Guzmán Abogados y Notarios se ha consolidado como un referente de seriedad, integridad y eficacia en la defensa de los intereses de nuestros clientes.</p>
+</section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="py-16">
-    <div class="max-w-xl mx-auto px-4">
-      <h3 class="text-2xl font-bold mb-6 text-center">Contáctenos</h3>
-      <form class="space-y-4">
-        <input type="text" placeholder="Nombre completo" class="w-full px-4 py-2 border rounded" required>
-        <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 border rounded" required>
-        <textarea placeholder="Mensaje" class="w-full px-4 py-2 border rounded h-32" required></textarea>
-        <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Enviar</button>
-      </form>
-    </div>
-  </section>
+<section class="section contact-info">
+    <h3>Contacto</h3>
+    <p><strong>Correo electrónico:</strong> murilloyguzman@gmail.com</p>
+</section>
 
-  <!-- Pie de página -->
-  <footer class="bg-gray-200 py-6 text-center text-sm text-gray-600">
-    &copy; 2025 M Y G Abogados. Todos los derechos reservados.
-  </footer>
+<footer>
+    <p>&copy; 2025 M Y G Abogados. Todos los derechos reservados.</p>
+    <p>Correo: murilloyguzman@gmail.com</p>
+</footer>
+
+<!-- Botón de WhatsApp oculto por ahora -->
+<a class="whatsapp-button" href="#" title="WhatsApp">
+    &#x1F4AC;
+</a>
 
 </body>
 </html>
